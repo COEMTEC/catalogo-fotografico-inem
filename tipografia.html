@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Semiótica de la Tipografía — Reflejos</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Taller interactivo y laboratorio de semiótica tipográfica para el núcleo problémico 4. Licenciatura en Literatura y Lengua Castellana, Universidad del Tolima.">
+    <meta name="author" content="Colectivo de Estudiantes">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="tipo-body-standalone">
+
+    <!-- Golden floating particles -->
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+    <!-- Ambient background gradients -->
+    <div class="ambient-bg" aria-hidden="true"></div>
+
+    <!-- ============================================ -->
+    <!-- NAVIGATION                                    -->
+    <!-- ============================================ -->
+    <nav class="main-nav scrolled" id="mainNav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                Reflejos<span class="nav-dot"></span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html#paisajistica" data-sala="01">Paisajística</a>
+                <a href="index.html#moda" data-sala="02">Moda</a>
+                <a href="index.html#prensa" data-sala="03">Prensa</a>
+                <a href="tipografia.html" class="nav-special-link active" data-sala="04">Tipografía</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- MAIN WORKSPACE DASHBOARD                     -->
+    <!-- ============================================ -->
+    <main class="tipo-dashboard-main">
+        <div class="tipo-dashboard-panel">
+            <div class="tipo-modal-grid">
+                <!-- Columna Izquierda: Guía de Aprendizaje -->
+                <div class="tipo-guide-panel">
+                    <div class="tipo-guide-header">
+                        <span class="tipo-guide-subtitle">Núcleo Problémico 04</span>
+                        <h2 class="tipo-guide-title">Semiótica de la Tipografía</h2>
+                        <div class="tipo-guide-divider"></div>
+                    </div>
+
+                    <div class="tipo-tabs" role="tablist">
+                        <button class="tipo-tab-btn active" data-tab="tab-tematica" role="tab" aria-selected="true">Temática</button>
+                        <button class="tipo-tab-btn" data-tab="tab-actividad" role="tab" aria-selected="false">Actividad</button>
+                        <button class="tipo-tab-btn" data-tab="tab-preguntas" role="tab" aria-selected="false">Preguntas</button>
+                        <button class="tipo-tab-btn" data-tab="tab-rubrica" role="tab" aria-selected="false">Rúbrica</button>
+                    </div>
+
+                    <div class="tipo-tab-contents">
+                        <!-- Tab Temática -->
+                        <div class="tipo-tab-content active" id="tab-tematica" role="tabpanel">
+                            <h3 class="tipo-content-title">Ejes Temáticos</h3>
+                            <p class="tipo-content-intro">La tipografía no es solo un canal neutro para el texto; posee una <strong>significación plástica</strong> que comunica por sí misma a través de sus formas, grosores y distribución espacial.</p>
+                            
+                            <ul class="tipo-topic-list">
+                                <li>
+                                    <span class="topic-num">4.1</span>
+                                    <div class="topic-info">
+                                        <h4>La Tipografía</h4>
+                                        <p>Estudio de los tipos de letra como signos visuales, su evolución histórica y las categorías estilísticas (Serif, Sans-Serif, Slab, Script, Display).</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="topic-num">4.2</span>
+                                    <div class="topic-info">
+                                        <h4>Los Mecanismos Tipográficos</h4>
+                                        <p>Variables micro-tipográficas: el tamaño (cuerpo), el interletrado (tracking), el interlineado (leading), el grosor (peso) y la inclinación.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="topic-num">4.3</span>
+                                    <div class="topic-info">
+                                        <h4>Tipografía y Diagramación</h4>
+                                        <p>Configuración espacial de la página, el uso de rejillas (grids), márgenes, alineación, columnas y la jerarquía visual de los textos.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab Actividad -->
+                        <div class="tipo-tab-content" id="tab-actividad" role="tabpanel">
+                            <h3 class="tipo-content-title">Orientaciones Tutoría 4</h3>
+                            <div class="tipo-message-box">
+                                <p><em>"Apreciad@s estudiantes y futuros profesionales de la educación. Reciban un cordial y afectuoso saludo de paz y bienestar."</em></p>
+                            </div>
+                            
+                            <h4 class="tipo-section-subtitle">Instrucciones de Trabajo:</h4>
+                            <ol class="tipo-steps-list">
+                                <li><strong>Lectura y Consulta:</strong> Analizar el material suministrado y realizar búsquedas sobre la temática para tomar apuntes reflexivos de cara a la tutoría presencial.</li>
+                                <li><strong>Actividad Práctica:</strong> Elaborar un producto gráfico diseñado por el <strong>CIPAS</strong> (ej. cartel, infografía, afiche, periódico, revista, folleto, catálogo o página editorial).</li>
+                            </ol>
+
+                            <div class="tipo-alert-box warning">
+                                <span class="tipo-alert-icon">⚠</span>
+                                <div class="tipo-alert-body">
+                                    <strong>Recordatorio Importante:</strong>
+                                    <p>Queda pendiente la actividad de fotografía correspondiente a la tutoría 3 para ser presentada en este próximo encuentro.</p>
+                                </div>
+                            </div>
+
+                            <h4 class="tipo-section-subtitle">Referencias Bibliográficas:</h4>
+                            <ul class="tipo-ref-list">
+                                <li>
+                                    <span class="ref-icon">📖</span>
+                                    <div>
+                                        <strong>Pérez, N. (2010)</strong>. <em>"Apuntes sobre semiótica en tipografía"</em>. Revista S. Bucaramanga, 4, p. 11-27.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="ref-icon">📖</span>
+                                    <div>
+                                        <strong>Pérez, N. (2011)</strong>. <em>"Significación plástica de la tipografía desde la mirada de la semiótica visual"</em>. Revista KEPES, 8(7), p. 269-288.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab Preguntas -->
+                        <div class="tipo-tab-content" id="tab-preguntas" role="tabpanel">
+                            <h3 class="tipo-content-title">Preguntas Generadoras</h3>
+                            <p class="tipo-content-intro">Usa este espacio para reflexionar y redactar tus apuntes para la tutoría. Tus respuestas se guardarán de forma local y podrás descargarlas.</p>
+                            
+                            <div class="tipo-qa-form">
+                                <div class="tipo-qa-group">
+                                    <label for="q1">1. ¿Qué es la tipografía?</label>
+                                    <textarea id="q1" placeholder="Escribe tu reflexión aquí..."></textarea>
+                                </div>
+                                <div class="tipo-qa-group">
+                                    <label for="q2">2. ¿Cuáles son los elementos constitutivos de la tipografía?</label>
+                                    <textarea id="q2" placeholder="Escribe tu reflexión aquí..."></textarea>
+                                </div>
+                                <div class="tipo-qa-group">
+                                    <label for="q3">3. ¿Qué lugar ocupa la tipografía en la diagramación de un texto?</label>
+                                    <textarea id="q3" placeholder="Escribe tu reflexión aquí..."></textarea>
+                                </div>
+                                <div class="tipo-qa-actions">
+                                    <button type="button" class="tipo-btn tipo-btn--secondary" id="btnSaveDraft">Guardar Borrador</button>
+                                    <button type="button" class="tipo-btn tipo-btn--primary" id="btnDownloadNotes">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                        Descargar Apuntes (.txt)
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab Rúbrica -->
+                        <div class="tipo-tab-content" id="tab-rubrica" role="tabpanel">
+                            <h3 class="tipo-content-title">Rúbrica de Evaluación</h3>
+                            <p class="tipo-content-intro">Aspectos que se tendrán en cuenta para la valoración del trabajo individual y grupal (CIPAS) durante la socialización presencial.</p>
+                            
+                            <div class="tipo-rubric-grid">
+                                <div class="tipo-rubric-card">
+                                    <span class="rubric-score">✓</span>
+                                    <h4>Participación y Argumentación</h4>
+                                    <p>Calidad y rigor de las intervenciones del CIPAS en el encuentro presencial.</p>
+                                </div>
+                                <div class="tipo-rubric-card">
+                                    <span class="rubric-score">✓</span>
+                                    <h4>Apropiación Temática</h4>
+                                    <p>Demostrar apropiación de la tipografía y su rol en la diagramación.</p>
+                                </div>
+                                <div class="tipo-rubric-card">
+                                    <span class="rubric-score">✓</span>
+                                    <h4>Sustentación y Autoevaluación</h4>
+                                    <p>Capacidad para sustentar los aprendizajes adquiridos y autoevaluarse.</p>
+                                </div>
+                                <div class="tipo-rubric-card">
+                                    <span class="rubric-score">✓</span>
+                                    <h4>Aporte Crítico y Creatividad</h4>
+                                    <p>Profundidad conceptual en los comentarios y diseño creativo del producto.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Laboratorio de Tipografía -->
+                <div class="tipo-lab-panel">
+                    <div class="tipo-lab-header">
+                        <span class="tipo-lab-subtitle">Playground Interactivo</span>
+                        <h3 class="tipo-lab-title">Laboratorio Semiótico de Diagramación</h3>
+                    </div>
+
+                    <!-- El Lienzo (Live Preview) -->
+                    <div class="tipo-preview-canvas" id="tipoPreviewCanvas">
+                        <!-- Column Grids overlayed -->
+                        <div class="tipo-grid-overlay" id="tipoGridOverlay">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        
+                        <!-- Visual poster mockup content -->
+                        <div class="tipo-poster-mockup" id="tipoPosterMockup">
+                            <!-- Cabecera de la infografía -->
+                            <header class="tipo-info-header">
+                                <span class="tipo-info-tag tipo-poster-tag" id="tipoPreviewTag">NÚCLEO PROBLÉMICO 4 · UT</span>
+                                <h1 class="tipo-info-title tipo-poster-title" id="tipoPreviewTitle">La Semiótica Visual del Texto</h1>
+                            </header>
+                            
+                            <!-- Cuerpo estructurado en columnas de infografía -->
+                            <div class="tipo-info-grid">
+                                <!-- Bloque 1: Estilo Serif -->
+                                <div class="tipo-info-block tipo-info-block--serif">
+                                    <div class="tipo-info-num-wrap">
+                                        <span class="tipo-info-num" style="font-family: var(--font-display), Georgia, serif;">Aa</span>
+                                        <span class="tipo-info-line"></span>
+                                    </div>
+                                    <h4 class="tipo-info-block-title">Estilo Serif (Con Gracias)</h4>
+                                    <p class="tipo-info-block-text tipo-poster-body" id="tipoPreviewBody">
+                                        Las serifas o gracias guían la lectura continua. Su diseño histórico transmite elegancia, tradición, rigor clásico y alta credibilidad editorial.
+                                    </p>
+                                </div>
+                                
+                                <!-- Bloque 2: Estilo Sans-Serif -->
+                                <div class="tipo-info-block tipo-info-block--sans">
+                                    <div class="tipo-info-num-wrap">
+                                        <span class="tipo-info-num" style="font-family: var(--font-body), 'DM Sans', sans-serif;">Aa</span>
+                                        <span class="tipo-info-line"></span>
+                                    </div>
+                                    <h4 class="tipo-info-block-title">Estilo Sans-Serif (Palo Seco)</h4>
+                                    <p class="tipo-info-block-text">
+                                        La ausencia de remates denota minimalismo, modernidad y objetividad. Reduce la fatiga visual en pantallas y connota un mensaje directo y tecnológico.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Pie de la infografía -->
+                            <footer class="tipo-info-footer">
+                                <span class="tipo-info-source tipo-poster-source" id="tipoPreviewSource">LIC. EN LITERATURA Y LENGUA CASTELLANA · MULTIMODALIDAD</span>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- Los Controles -->
+                    <div class="tipo-controls-panel">
+                        <div class="tipo-control-row">
+                            <div class="tipo-control-group">
+                                <label for="ctrlFont">Estilo de Letra (Familia)</label>
+                                <select id="ctrlFont">
+                                    <option value="var(--font-display)">Playfair Display (Serif Elegante)</option>
+                                    <option value="var(--font-body)">DM Sans (Sans-Serif Moderna)</option>
+                                    <option value="'Courier New', monospace">Courier (Slab-Serif Mecánica)</option>
+                                    <option value="'Georgia', serif">Georgia (Editorial Tradicional)</option>
+                                    <option value="'Trebuchet MS', sans-serif">Trebuchet (Funcional/Limpia)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="tipo-control-group">
+                                <label>Grosor (Peso)</label>
+                                <div class="tipo-toggle-buttons">
+                                    <button type="button" class="tipo-toggle-btn active" data-weight="400">Regular</button>
+                                    <button type="button" class="tipo-toggle-btn" data-weight="700">Negrita</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tipo-control-row">
+                            <div class="tipo-control-group">
+                                <label for="ctrlSize">Tamaño de Fuente: <span class="ctrl-val-display" id="valSize">28px</span></label>
+                                <input type="range" id="ctrlSize" min="18" max="44" value="28">
+                            </div>
+                            
+                            <div class="tipo-control-group">
+                                <label for="ctrlSpacing">Interletrado: <span class="ctrl-val-display" id="valSpacing">0px</span></label>
+                                <input type="range" id="ctrlSpacing" min="-2" max="8" value="0" step="0.5">
+                            </div>
+                        </div>
+
+                        <div class="tipo-control-row">
+                            <div class="tipo-control-group">
+                                <label for="ctrlLeading">Interlineado: <span class="ctrl-val-display" id="valLeading">1.4</span></label>
+                                <input type="range" id="ctrlLeading" min="0.9" max="2.2" value="1.4" step="0.1">
+                            </div>
+                            
+                            <div class="tipo-control-group">
+                                <label>Alineación</label>
+                                <div class="tipo-align-buttons">
+                                    <button type="button" class="tipo-align-btn" data-align="left" title="Izquierda">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="17" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="17" y1="18" x2="3" y2="18"></line></svg>
+                                    </button>
+                                    <button type="button" class="tipo-align-btn active" data-align="center" title="Centrado">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="10" x2="6" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="18" y1="18" x2="6" y2="18"></line></svg>
+                                    </button>
+                                    <button type="button" class="tipo-align-btn" data-align="right" title="Derecha">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="21" y1="10" x2="7" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="7" y2="18"></line></svg>
+                                    </button>
+                                    <button type="button" class="tipo-align-btn" data-align="justify" title="Justificado">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tipo-control-row">
+                            <div class="tipo-control-group tipo-control-group--full">
+                                <div class="tipo-checkbox-wrapper">
+                                    <input type="checkbox" id="ctrlGrid" class="tipo-checkbox">
+                                    <label for="ctrlGrid" class="tipo-checkbox-label">Mostrar Retícula de Diagramación (Rejilla de 3 Columnas)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- El Mensaje Semiótico Dinámico -->
+                    <div class="tipo-semiotic-explanation">
+                        <span class="ex-label">Lectura Semiótica del Diseño:</span>
+                        <p id="tipoSemioticText" class="ex-body">Cargando interpretación...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-brand">
+                Reflejos<span class="nav-dot"></span>
+            </div>
+            <p class="footer-copy">
+                &copy; 2026 Colectivo de Estudiantes · Lic. en Literatura y Lengua Castellana<br>
+                Multimodalidad y Medios de Comunicación · Universidad del Tolima
+            </p>
+        </div>
+    </footer>
+
+    <!-- App Logic -->
+    <script src="tipografia.js"></script>
+</body>
+</html>

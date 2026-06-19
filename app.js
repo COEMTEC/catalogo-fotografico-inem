@@ -494,3 +494,4 @@ function initParticles() {
     init();
     loop();
 }
+

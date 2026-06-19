@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El INEM es Mío — Álbum Fotográfico Discursivo</title>
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Álbum fotográfico discursivo narrado desde los ojos de un gato. Una reflexión visual sobre la identidad, la pertenencia y el deseo de ser otro. Universidad del Tolima.">
+    <meta name="author" content="Aura María Salamanca, Luisa Camila Giraldo, Maby Calambas">
+
+    <!-- Fonts (same family as main site) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Album Styles -->
+    <link rel="stylesheet" href="album.css">
+</head>
+
+<body>
+
+    <!-- AUDIO BACKGROUND -->
+    <audio id="bgAudio" loop preload="auto">
+        <source src="Escalera de Hielo.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- SOUND TOGGLE -->
+    <button class="global-sound-toggle" id="globalSoundToggle" aria-label="Activar o desactivar sonido">
+        <svg class="sound-icon-on" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:none;">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+        <svg class="sound-icon-off" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="1" x2="1" y2="23"></line>
+        </svg>
+    </button>
+    
+    <!-- ============================================ -->
+    <!-- NAVIGATION                                    -->
+    <!-- ============================================ -->
+    <nav class="album-nav is-hidden" id="albumNav">
+        <a href="index.html" class="album-back">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5" />
+                <path d="M12 19l-7-7 7-7" />
+            </svg>
+            <span>Reflejos</span>
+        </a>
+        <div class="album-progress-wrap">
+            <div class="album-progress-bar" id="progressBar"></div>
+        </div>
+        <span class="album-page-count" id="pageCount">Portada</span>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- SCROLL CONTAINER                              -->
+    <!-- ============================================ -->
+    <div class="album-scroll" id="albumScroll">
+
+        <!-- ===== PORTADA ===== -->
+        <section class="album-page album-cover" data-page="0">
+            <div class="cover-content">
+                <div class="cover-ornament">
+                    <span class="cover-line"></span>
+                    <span class="cover-diamond">◆</span>
+                    <span class="cover-line"></span>
+                </div>
+                <span class="cover-badge">Álbum Fotográfico Discursivo</span>
+                <h1 class="cover-title">
+                    <span class="cover-title-line">El INEM</span>
+                    <span class="cover-title-line cover-title-accent">es Mío</span>
+                </h1>
+                <p class="cover-subtitle">Una reflexión visual sobre la identidad, la pertenencia y el deseo de lo otro.
+                </p>
+                <div class="cover-meta">
+                    <span>Multimodalidad y Medios de Comunicación</span>
+                    <span>Universidad del Tolima · 2026</span>
+                </div>
+                <div class="cover-scroll-cue" id="scrollCue">
+                    <span>Comenzar la historia</span>
+                    <div class="scroll-arrow-album">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 5v14" />
+                            <path d="M5 12l7 7 7-7" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PÁGINA 1: "Conozco cada rincón" ===== -->
+        <section class="album-page" data-page="1">
+            <div class="page-image-wrap">
+                <img class="page-image" src="paisajistica_camino_persona muy en fondo.jpeg"
+                    alt="Camino largo con vegetación, una persona se distingue a lo lejos" loading="lazy">
+            </div>
+            <div class="page-overlay"></div>
+            <div class="page-text-wrap">
+                <div class="page-text">
+                    <p class="text-line" data-delay="0">Conozco cada rincón de este lugar.</p>
+                    <p class="text-line" data-delay="1">Antes de que lleguen, ya estoy aquí.</p>
+                    <p class="text-line" data-delay="2">Los veo aparecer desde lejos.</p>
+                    <p class="text-line" data-delay="3">Me es indiferente si se acercan.</p>
+                    <p class="text-line" data-delay="4">Pero a veces los veo cuando se van,</p>
+                    <p class="text-line text-line--accent" data-delay="5">y me gustaría saber hacia dónde.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PÁGINA 2: "El INEM es mío" ===== -->
+        <section class="album-page has-right-text" data-page="2">
+            <div class="page-image-wrap">
+                <img class="page-image" src="Gato acostado en la tierra cerca editado.jpeg"
+                    alt="Gato mirando a la cámara desde el suelo" loading="lazy">
+            </div>
+            <div class="page-overlay"></div>
+            <div class="page-text-wrap">
+                <div class="page-text">
+                    <p class="text-line" data-delay="0">Me llaman el gato del INEM.</p>
+                    <p class="text-line" data-delay="1">Pero yo no soy del INEM.</p>
+                    <p class="text-line text-line--accent text-line--large" data-delay="2">El INEM es mío.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PÁGINA 3: "Los observo" ===== -->
+        <section class="album-page" data-page="3">
+            <div class="page-image-wrap">
+                <img class="page-image" src="moda_estudiante_acostada_en muro pequeño plantas de fondomedio.jpeg"
+                    alt="Estudiante acostada sobre un muro con plantas de fondo" loading="lazy">
+            </div>
+            <div class="page-overlay"></div>
+            <div class="page-text-wrap">
+                <div class="page-text">
+                    <p class="text-line" data-delay="0">Los observo.</p>
+                    <p class="text-line" data-delay="1">A veces hacen ruidos extraños con la boca</p>
+                    <p class="text-line" data-delay="2">mientras cruzan sus extremidades</p>
+                    <p class="text-line" data-delay="3">alrededor de otros cuerpos.</p>
+                    <p class="text-line" data-delay="4">No entiendo bien para qué.</p>
+                    <p class="text-line" data-delay="5">Parece que lo disfrutan,</p>
+                    <p class="text-line text-line--accent" data-delay="6">aunque a veces también parece que duele.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PÁGINA 4: "Cosas en los dedos" ===== -->
+        <section class="album-page" data-page="4">
+            <div class="page-image-wrap">
+                <img class="page-image" src="moda_anillo_detalle.jpeg"
+                    alt="Detalle de un anillo en la mano de una persona" loading="lazy">
+            </div>
+            <div class="page-overlay"></div>
+            <div class="page-text-wrap">
+                <div class="page-text">
+                    <p class="text-line" data-delay="0">Algunos tienen cosas en los dedos.</p>
+                    <p class="text-line" data-delay="1">Una cosa pequeña, brillante,</p>
+                    <p class="text-line" data-delay="2">la he observado de cerca</p>
+                    <p class="text-line" data-delay="3">pero no sirve para nada.</p>
+                    <p class="text-line" data-delay="4">Aunque los que la tienen...</p>
+                    <p class="text-line text-line--accent" data-delay="5">parecen más tranquilos.</p>
+                    <p class="text-line" data-delay="6">Como si esa cosa pequeña</p>
+                    <p class="text-line text-line--accent" data-delay="7">les recordara que no están solos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PÁGINA 5: "Desde abajo" ===== -->
+        <section class="album-page has-centered-text" data-page="5">
+            <div class="page-image-wrap">
+                <img class="page-image" src="prensa_suela_zapato_foto desde abajo.jpeg"
+                    alt="Vista desde abajo: suela de zapato contra el cielo, perspectiva contrapicada" loading="lazy">
+            </div>
+            <div class="page-overlay"></div>
+            <div class="page-text-wrap">
+                <div class="page-text page-text--centered">
+                    <p class="text-line text-line--large" data-delay="0">Desde abajo</p>
+                    <p class="text-line text-line--large" data-delay="1">todo se ve tan grande.</p>
+                    <p class="text-line text-line--large" data-delay="2">los árboles, el campus, la vida.</p>
+                    <p class="text-line text-line--large text-line--accent" data-delay="3">Ellos también.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PÁGINA 6: "Desde arriba" ===== -->
+        <section class="album-page" data-page="6">
+            <div class="page-image-wrap">
+                <img class="page-image page-image--bottom-focus"
+                    src="Sin editar/dos estudiantes acostadas en el suelo, foto desde arriba.jpeg"
+                    alt="Dos estudiantes acostadas en el suelo, fotografiadas desde arriba" loading="lazy">
+            </div>
+            <div class="page-overlay"></div>
+            <div class="page-text-wrap">
+                <div class="page-text">
+                    <p class="text-line" data-delay="0">Siempre he pensado que</p>
+                    <p class="text-line" data-delay="1">desde arriba todo se ve diferente.</p>
+                    <p class="text-line" data-delay="2">Desde acá las puedo mirar sin que se den cuenta.</p>
+                    <p class="text-line" data-delay="3">Hoy están tranquilas, aunque a veces las escucho decir que,</p>
+                    <p class="text-line text-line--accent" data-delay="4">estar abajo, da miedo.</p>
+                    <p class="text-line" data-delay="5">Y últimamente pienso, desde acá arriba,</p>
+                    <p class="text-line" data-delay="6">que quisiera poder experimentar lo que sienten, lo que viven.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PÁGINA 7: "Quisiera unirme" ===== -->
+        <section class="album-page has-bottom-right-text" data-page="7">
+            <div class="page-image-wrap">
+                <img class="page-image" src="paisajistica_gato_detalle_ojos.jpeg" alt="Gato en primerísimo plano"
+                    loading="lazy">
+            </div>
+            <div class="page-overlay"></div>
+            <div class="page-text-wrap">
+                <div class="page-text">
+                    <p class="text-line text-line--accent text-line--large" data-delay="0">Quisiera unirme a ellas</p>
+                    <p class="text-line text-line--accent text-line--large" data-delay="1">y rodear sus cuerpos</p>
+                    <p class="text-line text-line--accent text-line--large" data-delay="2">con mis patas también.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PÁGINA 8: "Quizás si salto" ===== -->
+        <section class="album-page album-tension has-centered-text" data-page="8">
+            <div class="page-image-wrap">
+                <!-- Sin imagen, fondo negro de tensión -->
+            </div>
+            <div class="page-overlay page-overlay--tension"></div>
+            <div class="page-text-wrap">
+                <div class="page-text page-text--centered">
+                    <p class="text-line" data-delay="0">La verdad me da pereza, aunque quiero...</p>
+                    <p class="text-line" data-delay="0">Quizás si salto llego más rápido.</p>
+                    <p class="text-line" data-delay="1">Quizás así bajo de otra manera.</p>
+                    <p class="text-line text-line--pause" data-delay="2">&nbsp;</p>
+                    <p class="text-line text-line--accent text-line--large" data-delay="3">He escuchado que los gatos
+                    </p>
+                    <p class="text-line text-line--accent text-line--large" data-delay="4">siempre caemos de pie.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PÁGINA 9: SILENCIO ===== -->
+        <section class="album-page album-silence" data-page="9">
+            <!-- Flash blanco momentáneo para impacto -->
+            <div class="silence-flash"></div>
+            <div class="page-image-wrap">
+                <img class="page-image page-image--sinister" src="prensa_simulacro_escalera_picado1.jpeg"
+                    alt="Escena de caída en las escaleras" loading="lazy">
+            </div>
+        </section>
+
+        <!-- ===== PÁGINA 10: PLACA FINAL (Parte 1) ===== -->
+        <section class="album-page album-placa" data-page="10">
+            <div class="placa-content">
+                <div class="placa-lines">
+                    <p class="placa-line" data-delay="0">Fue una persona.</p>
+                    <p class="placa-line" data-delay="1">Pero un día dejó de serlo, o al menos, de sentirlo.</p>
+                    <p class="placa-line placa-spacer" data-delay="2">&nbsp;</p>
+                    <p class="placa-line" data-delay="3">Se volvió otra cosa.</p>
+                    <p class="placa-line" data-delay="4">Y desde esa otra cosa, empezó a preguntarse</p>
+                    <p class="placa-line" data-delay="5">qué se sentiría ser persona —</p>
+                    <p class="placa-line" data-delay="6">sin saber que eso, exactamente eso,</p>
+                    <p class="placa-line" data-delay="7">era su verdadero origen, era su identidad.</p>
+                    <p class="placa-line placa-spacer" data-delay="8">&nbsp;</p>
+                    <p class="placa-line placa-line--title" data-delay="9">Un ciclo de inconformidad eterna.</p>
+                    <p class="placa-line placa-spacer" data-delay="10">&nbsp;</p>
+                    <p class="placa-line" data-delay="11">Si estoy solo quiero compañía.</p>
+                    <p class="placa-line" data-delay="12">Si tengo compañía quiero silencio.</p>
+                    <p class="placa-line" data-delay="13">Si estoy aquí, quiero irme de casa.</p>
+                    <p class="placa-line" data-delay="14">Pero si me voy de casa, me pregunto qué se sentiría tener a
+                        mis padres de vuelta.</p>
+                </div>
+
+                <div class="cover-scroll-cue"
+                    style="margin-top: 4rem; opacity: 0; animation: coverFadeIn 1.2s ease 4s forwards;">
+                    <span>Continuar</span>
+                    <div class="scroll-arrow-album">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 5v14" />
+                            <path d="M5 12l7 7 7-7" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PÁGINA 11: PLACA FINAL (Parte 2) ===== -->
+        <section class="album-page album-placa" data-page="11">
+            <div class="placa-content">
+                <div class="placa-lines">
+                    <p class="placa-line" data-delay="0">Siempre vemos la parte luminosa de lo que nos falta.</p>
+                    <p class="placa-line placa-line--accent" data-delay="1">Nunca la textura y el color de lo que ya
+                        tenemos en las manos.</p>
+                    <p class="placa-line placa-spacer" data-delay="2">&nbsp;</p>
+                    <p class="placa-line" data-delay="3">El gato miraba a los humanos y solo veía sus abrazos.</p>
+                    <p class="placa-line" data-delay="4">Pero no veía el peso en sus brazos. No veía lo que cargaban.
+                    </p>
+                    <p class="placa-line placa-spacer" data-delay="5">&nbsp;</p>
+                    <p class="placa-line" data-delay="6">Y olvidó que los gatos no caen bien por azar.</p>
+                    <p class="placa-line placa-line--accent" data-delay="7">Caen bien porque saben, con exactitud, que
+                        son gatos.</p>
+                    <p class="placa-line placa-spacer" data-delay="8">&nbsp;</p>
+                    <p class="placa-line placa-line--final" data-delay="9" style="font-size: 2.5rem; line-height: 1.2;">
+                        Reconoce lo que eres.</p>
+                    <p class="placa-line placa-line--final-sub" data-delay="10"
+                        style="font-size: 1.8rem; margin-top: 1rem;">No porque sea perfecto.</p>
+                    <p class="placa-line placa-line--final-sub placa-line--accent" data-delay="11"
+                        style="font-size: 1.8rem;">Sino porque es solo tuyo.</p>
+                </div>
+
+                <div class="cover-scroll-cue"
+                    style="margin-top: 4rem; opacity: 0; animation: coverFadeIn 1.2s ease 4s forwards;">
+                    <span>Créditos</span>
+                    <div class="scroll-arrow-album">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 5v14" />
+                            <path d="M5 12l7 7 7-7" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PÁGINA 12: CRÉDITOS ===== -->
+        <section class="album-page album-placa" data-page="12">
+            <div class="placa-content">
+                <div class="placa-footer" data-delay="0" style="opacity: 1; transform: none; margin-top: 0;">
+                    <div class="placa-ornament">
+                        <span class="placa-orn-line"></span>
+                        <span class="placa-orn-diamond">◆</span>
+                        <span class="placa-orn-line"></span>
+                    </div>
+                    <p class="placa-credit" style="font-size: 1.2rem; line-height: 2;">
+                        Aura María Salamanca · Luisa Camila Giraldo · Maby Calambas<br>
+                        Multimodalidad y Medios de Comunicación<br>
+                        Universidad del Tolima · 2026
+                    </p>
+                    <a href="index.html" class="placa-back" style="margin-top: 3rem;">Volver a Reflejos →</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Album Logic -->
+    <script src="album.js"></script>
+</body>
+
+</html>
